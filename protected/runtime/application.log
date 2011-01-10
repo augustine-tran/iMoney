@@ -1,0 +1,160 @@
+2011/01/10 08:25:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CWebApplication.php:328
+Stack trace:
+#0 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CWebApplication.php(121): CWebApplication->runController('user')
+#1 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#2 /Users/khanhtran/projects/imoney/index-test.php(15): CApplication->run()
+#3 {main} REQUEST_URI=/imoney/index-test.php?r=user
+2011/01/10 08:25:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "User".' in /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CWebApplication.php:328
+Stack trace:
+#0 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CWebApplication.php(121): CWebApplication->runController('User')
+#1 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#2 /Users/khanhtran/projects/imoney/index-test.php(15): CApplication->run()
+#3 {main} REQUEST_URI=/imoney/index-test.php?r=User
+2011/01/10 09:04:53 [warning] [application] Failed to set unsafe attribute "user_user_id".
+2011/01/10 09:04:53 [error] [system.db.CDbCommand] Error in executing SQL: INSERT INTO `account` (`account_name`, `account_balance`, `account_type`) VALUES (:yp0, :yp1, :yp2)
+2011/01/10 09:04:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`imoney`.`account`, CONSTRAINT `fk_account_user1` FOREIGN KEY (`user_user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)' in /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/db/CDbCommand.php:256
+Stack trace:
+#0 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/db/ar/CActiveRecord.php(1000): CDbCommand->execute()
+#1 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/db/ar/CActiveRecord.php(764): CActiveRecord->insert(NULL)
+#2 /Users/khanhtran/projects/imoney/protected/controllers/AccountController.php(72): CActiveRecord->save()
+#3 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/actions/CInlineAction.php(57): AccountController->actionCreate()
+#4 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(300): CInlineAction->run()
+#5 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(1084): CFilter->filter(Object(CFilterChain))
+#8 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(283): CFilterChain->run()
+#11 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CWebApplication.php(324): CController->run('create')
+#13 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CWebApplication.php(121): CWebApplication->runController('account/create')
+#14 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#15 /Users/khanhtran/projects/imoney/index-test.php(15): CApplication->run()
+#16 {main} REQUEST_URI=/imoney/index-test.php?r=account/create
+2011/01/10 09:04:59 [warning] [application] Failed to set unsafe attribute "user_user_id".
+2011/01/10 09:04:59 [error] [system.db.CDbCommand] Error in executing SQL: INSERT INTO `account` (`account_name`, `account_balance`, `account_type`) VALUES (:yp0, :yp1, :yp2)
+2011/01/10 09:04:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`imoney`.`account`, CONSTRAINT `fk_account_user1` FOREIGN KEY (`user_user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)' in /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/db/CDbCommand.php:256
+Stack trace:
+#0 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/db/ar/CActiveRecord.php(1000): CDbCommand->execute()
+#1 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/db/ar/CActiveRecord.php(764): CActiveRecord->insert(NULL)
+#2 /Users/khanhtran/projects/imoney/protected/controllers/AccountController.php(72): CActiveRecord->save()
+#3 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/actions/CInlineAction.php(57): AccountController->actionCreate()
+#4 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(300): CInlineAction->run()
+#5 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(1084): CFilter->filter(Object(CFilterChain))
+#8 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(283): CFilterChain->run()
+#11 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CWebApplication.php(324): CController->run('create')
+#13 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CWebApplication.php(121): CWebApplication->runController('account/create')
+#14 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#15 /Users/khanhtran/projects/imoney/index-test.php(15): CApplication->run()
+#16 {main} REQUEST_URI=/imoney/index-test.php?r=account/create
+2011/01/10 09:05:36 [warning] [application] Failed to set unsafe attribute "user_user_id".
+2011/01/10 09:05:36 [error] [system.db.CDbCommand] Error in executing SQL: INSERT INTO `account` (`account_name`, `account_balance`, `account_type`) VALUES (:yp0, :yp1, :yp2)
+2011/01/10 09:05:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`imoney`.`account`, CONSTRAINT `fk_account_user1` FOREIGN KEY (`user_user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)' in /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/db/CDbCommand.php:256
+Stack trace:
+#0 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/db/ar/CActiveRecord.php(1000): CDbCommand->execute()
+#1 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/db/ar/CActiveRecord.php(764): CActiveRecord->insert(NULL)
+#2 /Users/khanhtran/projects/imoney/protected/controllers/AccountController.php(72): CActiveRecord->save()
+#3 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/actions/CInlineAction.php(57): AccountController->actionCreate()
+#4 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(300): CInlineAction->run()
+#5 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(1084): CFilter->filter(Object(CFilterChain))
+#8 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(283): CFilterChain->run()
+#11 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CWebApplication.php(324): CController->run('create')
+#13 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CWebApplication.php(121): CWebApplication->runController('account/create')
+#14 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#15 /Users/khanhtran/projects/imoney/index-test.php(15): CApplication->run()
+#16 {main} REQUEST_URI=/imoney/index-test.php?r=account/create
+2011/01/10 09:07:39 [warning] [application] Failed to set unsafe attribute "user_user_id".
+2011/01/10 09:07:39 [error] [system.db.CDbCommand] Error in executing SQL: INSERT INTO `account` (`account_name`, `account_balance`, `account_type`) VALUES (:yp0, :yp1, :yp2)
+2011/01/10 09:07:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`imoney`.`account`, CONSTRAINT `fk_account_user1` FOREIGN KEY (`user_user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)' in /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/db/CDbCommand.php:256
+Stack trace:
+#0 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/db/ar/CActiveRecord.php(1000): CDbCommand->execute()
+#1 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/db/ar/CActiveRecord.php(764): CActiveRecord->insert(NULL)
+#2 /Users/khanhtran/projects/imoney/protected/controllers/AccountController.php(72): CActiveRecord->save()
+#3 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/actions/CInlineAction.php(57): AccountController->actionCreate()
+#4 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(300): CInlineAction->run()
+#5 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(1084): CFilter->filter(Object(CFilterChain))
+#8 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(283): CFilterChain->run()
+#11 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CWebApplication.php(324): CController->run('create')
+#13 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CWebApplication.php(121): CWebApplication->runController('account/create')
+#14 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#15 /Users/khanhtran/projects/imoney/index-test.php(15): CApplication->run()
+#16 {main} REQUEST_URI=/imoney/index-test.php?r=account/create
+2011/01/10 09:08:25 [warning] [application] Failed to set unsafe attribute "user_user_id".
+2011/01/10 09:08:25 [error] [system.db.CDbCommand] Error in executing SQL: INSERT INTO `account` (`account_name`, `account_balance`, `account_type`) VALUES (:yp0, :yp1, :yp2)
+2011/01/10 09:08:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`imoney`.`account`, CONSTRAINT `fk_account_user1` FOREIGN KEY (`user_user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)' in /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/db/CDbCommand.php:256
+Stack trace:
+#0 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/db/ar/CActiveRecord.php(1000): CDbCommand->execute()
+#1 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/db/ar/CActiveRecord.php(764): CActiveRecord->insert(NULL)
+#2 /Users/khanhtran/projects/imoney/protected/controllers/AccountController.php(72): CActiveRecord->save()
+#3 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/actions/CInlineAction.php(57): AccountController->actionCreate()
+#4 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(300): CInlineAction->run()
+#5 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(1084): CFilter->filter(Object(CFilterChain))
+#8 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(283): CFilterChain->run()
+#11 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CWebApplication.php(324): CController->run('create')
+#13 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CWebApplication.php(121): CWebApplication->runController('account/create')
+#14 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#15 /Users/khanhtran/projects/imoney/index-test.php(15): CApplication->run()
+#16 {main} REQUEST_URI=/imoney/index-test.php?r=account/create
+2011/01/10 09:10:15 [warning] [application] Failed to set unsafe attribute "user_user_id".
+2011/01/10 09:10:15 [error] [system.db.CDbCommand] Error in executing SQL: INSERT INTO `account` (`account_name`, `account_balance`, `account_type`) VALUES (:yp0, :yp1, :yp2)
+2011/01/10 09:10:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`imoney`.`account`, CONSTRAINT `fk_account_user1` FOREIGN KEY (`user_user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)' in /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/db/CDbCommand.php:256
+Stack trace:
+#0 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/db/ar/CActiveRecord.php(1000): CDbCommand->execute()
+#1 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/db/ar/CActiveRecord.php(764): CActiveRecord->insert(NULL)
+#2 /Users/khanhtran/projects/imoney/protected/controllers/AccountController.php(72): CActiveRecord->save()
+#3 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/actions/CInlineAction.php(57): AccountController->actionCreate()
+#4 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(300): CInlineAction->run()
+#5 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(1084): CFilter->filter(Object(CFilterChain))
+#8 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(283): CFilterChain->run()
+#11 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CWebApplication.php(324): CController->run('create')
+#13 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CWebApplication.php(121): CWebApplication->runController('account/create')
+#14 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#15 /Users/khanhtran/projects/imoney/index-test.php(15): CApplication->run()
+#16 {main} REQUEST_URI=/imoney/index-test.php?r=account/create
+2011/01/10 09:13:08 [warning] [application] Failed to set unsafe attribute "user_user_id".
+2011/01/10 09:13:08 [error] [system.db.CDbCommand] Error in executing SQL: INSERT INTO `account` (`account_name`, `account_balance`, `account_type`) VALUES (:yp0, :yp1, :yp2)
+2011/01/10 09:13:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`imoney`.`account`, CONSTRAINT `fk_account_user1` FOREIGN KEY (`user_user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)' in /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/db/CDbCommand.php:256
+Stack trace:
+#0 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/db/ar/CActiveRecord.php(1000): CDbCommand->execute()
+#1 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/db/ar/CActiveRecord.php(764): CActiveRecord->insert(NULL)
+#2 /Users/khanhtran/projects/imoney/protected/controllers/AccountController.php(72): CActiveRecord->save()
+#3 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/actions/CInlineAction.php(57): AccountController->actionCreate()
+#4 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(300): CInlineAction->run()
+#5 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(1084): CFilter->filter(Object(CFilterChain))
+#8 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(283): CFilterChain->run()
+#11 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CWebApplication.php(324): CController->run('create')
+#13 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/web/CWebApplication.php(121): CWebApplication->runController('account/create')
+#14 /Users/khanhtran/projects/imoney/yii-1.1.5.r2654/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#15 /Users/khanhtran/projects/imoney/index-test.php(15): CApplication->run()
+#16 {main} REQUEST_URI=/imoney/index-test.php?r=account/create
+2011/01/10 09:21:57 [warning] [application] Failed to set unsafe attribute "user_user_id".
