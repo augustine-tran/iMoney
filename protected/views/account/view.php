@@ -22,6 +22,6 @@ $this->menu=array(
 		'account_name',
 		'account_balance',
 		'account_type',
-		'user_user_id',
+		array('name' => 'user_user_id', 'value' => CHtml::encode($model->owner->user_email)),
 	),
 )); ?>

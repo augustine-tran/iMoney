@@ -30,7 +30,7 @@ class Account extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'account';
+		return 'accounts';
 	}
 
 	/**
@@ -59,7 +59,7 @@ class Account extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'userUser' => array(self::BELONGS_TO, 'User', 'user_user_id'),
+			'owner' => array(self::BELONGS_TO, 'User', 'user_user_id'),
 			'transactions' => array(self::HAS_MANY, 'Transaction', 'account_account_id'),
 		);
 	}

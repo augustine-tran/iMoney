@@ -30,7 +30,7 @@ class User extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'user';
+		return 'users';
 	}
 
 	/**
@@ -45,7 +45,7 @@ class User extends CActiveRecord
 			array('user_email, user_password, user_fname, user_lname', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('user_id, user_email, user_password, user_fname, user_lname', 'safe', 'on'=>'search'),
+			array('user_name, user_id, user_email, user_password, user_fname, user_lname, last_login_time', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -69,10 +69,12 @@ class User extends CActiveRecord
 	{
 		return array(
 			'user_id' => 'User',
+			'user_name' => 'User',
 			'user_email' => 'User Email',
 			'user_password' => 'User Password',
 			'user_fname' => 'User Fname',
 			'user_lname' => 'User Lname',
+			'last_login_time' => 'Last login time',
 		);
 	}
 

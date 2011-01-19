@@ -63,6 +63,7 @@ class TransactionController extends Controller
 	{
 		$model=new Transaction;
 
+		$model->user_user_id = Yii::app()->user->ID;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 

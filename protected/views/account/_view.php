@@ -17,7 +17,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('user_user_id')); ?>:</b>
-	<?php echo CHtml::encode($data->user_user_id); ?>
+	<?php echo CHtml::encode($data->owner->user_name); ?>
 	<br />
 
 

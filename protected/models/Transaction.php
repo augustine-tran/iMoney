@@ -33,7 +33,7 @@ class Transaction extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'transaction';
+		return 'transactions';
 	}
 
 	/**
@@ -44,7 +44,7 @@ class Transaction extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('trans_created, trans_type, trans_amount, account_account_id, user_user_id', 'required'),
+			array('trans_created, trans_type, trans_amount, user_user_id', 'required'),
 			array('trans_amount', 'numerical', 'integerOnly'=>true),
 			array('trans_id, account_account_id, user_user_id', 'length', 'max'=>10),
 			array('trans_type', 'length', 'max'=>7),
@@ -63,8 +63,8 @@ class Transaction extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'accountAccount' => array(self::BELONGS_TO, 'Account', 'account_account_id'),
-			'userUser' => array(self::BELONGS_TO, 'User', 'user_user_id'),
+			'account' => array(self::BELONGS_TO, 'Account', 'account_account_id'),
+			'owner' => array(self::BELONGS_TO, 'User', 'user_user_id'),
 			'tags' => array(self::MANY_MANY, 'Tag', 'transaction_tag(trans_id, tag_id)'),
 		);
 	}
@@ -107,5 +107,26 @@ class Transaction extends CActiveRecord
 		return new CActiveDataProvider(get_class($this), array(
 			'criteria'=>$criteria,
 		));
+	}
+	
+	public function beforeValidate() {
+		if ($this->isNewRecord) {
+			$this->trans_created = new CDbException('NOW()');
+		}
+		return parent::beforeValidate();
+	}
+	
+	public function getTransactionTypeOptions() {
+		return array(0 => 'Expense', 1 => 'Income', 2 => 'Refund');
+	}
+	
+	public function getAccountOptions() {
+		$user = User::model()->findByPk(Yii::app()->user->ID);
+		return CHtml::listData($user->accounts, 'account_id', 'account_name');
+	}
+	
+	public function getTransactionTypeText() {
+		$arr = $this->getTransactionTypeOptions();
+		return $arr[$this->trans_type];
 	}
 }

@@ -20,10 +20,9 @@ $this->menu=array(
 	'attributes'=>array(
 		'trans_id',
 		'trans_created',
-		'trans_type',
+		array('name' => 'trans_type', 'value' => CHtml::encode($model->getTransactionTypeText())),
 		'trans_amount',
 		'trans_comment',
-		'account_account_id',
-		'user_user_id',
+		array('name' => 'account_account_id', 'value' => CHtml::encode($model->account->account_name)),
 	),
 )); ?>

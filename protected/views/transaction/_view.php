@@ -9,7 +9,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('trans_type')); ?>:</b>
-	<?php echo CHtml::encode($data->trans_type); ?>
+	<?php echo CHtml::encode($data->getTransactionTypeText()); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('trans_amount')); ?>:</b>
@@ -21,12 +21,6 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('account_account_id')); ?>:</b>
-	<?php echo CHtml::encode($data->account_account_id); ?>
+	<?php echo CHtml::encode($data->account->account_name); ?>
 	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('user_user_id')); ?>:</b>
-	<?php echo CHtml::encode($data->user_user_id); ?>
-	<br />
-
-
 </div>

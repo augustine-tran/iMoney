@@ -23,14 +23,12 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'account_type'); ?>
-		<?php echo $form->textField($model,'account_type',array('size'=>8,'maxlength'=>8)); ?>
+		<?php echo $form->dropDownList($model,'account_type', $this->getTypeOptions()); ?>
 		<?php echo $form->error($model,'account_type'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'user_user_id'); ?>
-		<?php echo $form->textField($model,'user_user_id',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'user_user_id'); ?>
+		<?php echo $form->hiddenField($model,'user_user_id', array(Yii::app()->user->getId())); ?>
 	</div>
 
 	<div class="row buttons">

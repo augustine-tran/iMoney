@@ -10,14 +10,8 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'trans_created'); ?>
-		<?php echo $form->textField($model,'trans_created'); ?>
-		<?php echo $form->error($model,'trans_created'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'trans_type'); ?>
-		<?php echo $form->textField($model,'trans_type',array('size'=>7,'maxlength'=>7)); ?>
+		<?php echo $form->dropDownList($model,'trans_type', $model->getTransactionTypeOptions()); ?>
 		<?php echo $form->error($model,'trans_type'); ?>
 	</div>
 
@@ -35,14 +29,12 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'account_account_id'); ?>
-		<?php echo $form->textField($model,'account_account_id',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->dropDownList($model,'account_account_id',$model->getAccountOptions(), array('empty' => '--'));?>
 		<?php echo $form->error($model,'account_account_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'user_user_id'); ?>
-		<?php echo $form->textField($model,'user_user_id',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'user_user_id'); ?>
+		<?php echo $form->hiddenField($model,'user_user_id'); ?>
 	</div>
 
 	<div class="row buttons">
